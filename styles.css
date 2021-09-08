@@ -1,0 +1,221 @@
+/*Hacemos un reset de estilos para todo el documento le decimos que empiece a contar desde el borde de la caja
+y que elimine los márgenes y paddings que vienen por defecto*/
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+/*font-family: 'Pacifico', cursive;
+font-family: 'Zilla Slab', serif*/
+
+
+/*****************HOJA DE ESTILOS CON FLEXBOX**********************/
+
+/**************************************Estilos del header************************/
+.header{
+    display: flex;
+    height: 10vh;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Pacifico';
+    font-style: italic;
+    background-color: rgb(48, 46, 46);
+    
+}
+#title{
+    display: flex;
+    margin-left: 3%;
+    margin-right: 1%;
+    color:rgb(255, 248, 248);
+   
+}
+
+
+
+#img img{
+    display: flex;
+    width:8%;
+    height: auto;
+    opacity: 0.5;
+}
+
+#links{
+    display: flex;
+    width:20%;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10%;
+    font-size: 20px;
+    font-family: 'Zilla Slab', serif;
+}
+
+#links a{
+    color: cornsilk;
+    padding: 5%;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+}
+
+#links a:hover{
+    color:rgb(243, 213, 91);
+}
+/**********************Estilos del main y de las secciones************************/
+#search-container{
+    display: flex;
+  
+    align-items: center;
+    margin-right: 8%;
+    width: 40%;
+    
+   
+    
+
+    
+}
+
+
+#search-container img{
+    display: flex;
+    
+    width:10%;
+}
+
+#search-container #search-button{
+    margin-left: 1%;
+    transition: .5s ease-in-out;
+    border-radius: 5%;
+    border:none;
+    padding: 1%;
+}
+
+#search-container #search-button:hover{
+    background-color: lemonchiffon;
+    cursor: pointer;
+}
+/*ESTILOS DE LA IMAGEN DE CARGANDO */
+
+#loader{
+    display:block;
+    margin:auto;
+}
+
+
+
+
+main{
+    background-color: rgb(93, 93, 97);
+    width:100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Zilla Slab', serif;
+    color:rgb(250, 246, 231);
+    
+   
+    
+
+
+}
+#loader-container{
+    
+    display: block;
+
+
+
+    
+
+}
+
+
+
+#content, #content-search{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    
+    background-color: rgb(61, 50, 53);
+    width: 85%;
+    
+    z-index: 4;
+    
+}
+
+
+
+   /**********Estilos de las tarjetas con las pelis***************/
+#movie-title{
+    margin-top: 4%;
+    margin-bottom: 3%;
+    
+}
+#cards{
+    display: flex;
+    justify-content: space-evenly;
+   
+   width:25%;
+   margin:1%;
+
+    
+    
+    
+    
+
+}
+#card{
+    
+    width: 100%;
+    
+    margin:2%;
+}
+
+#movie-figcaption{
+    width:100%;
+    margin-bottom: 4%;
+    color:rgb(192, 213, 245);
+}
+#movie-poster{
+    width:100%;
+    height: auto;
+}
+
+small, p{
+    color:rgb(121, 174, 255);
+}
+
+/**MEDIAQUERY PARA TERMINAR DE MATIZAR ALGUNAS PARTES*/
+
+@media (max-width: 643px){
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        height: 20vh;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Pacifico';
+        font-style: italic;
+        background-color: rgb(48, 46, 46);
+        
+    }
+
+    #title{
+        margin-top:3%;
+    }
+    
+   #img{
+       display: none;
+   }
+
+   #search-container{
+       width:40%;
+       margin-bottom: 2%;
+   }
+   
+
+
+
+
+}
